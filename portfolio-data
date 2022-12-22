@@ -1,0 +1,17 @@
+**/PORTFOLIO/**
+
+awwards
+https://www.fontpair.co/
+colorsupplyyy
+
+HOME (nombre, frase quien soy)
+WORKS/PROJECTS (3/4)
+ABOUT(EXPERIENCIA, MIGITHUB, TXT WHOIAM)
+CONTACT(MAIL,FORM,RRSS)
+
+CSS - BEM
+.bloque // .menu{} 
+.bloque__elemento // .menu__li{}
+.bloque__elemento--modificador // menu__li--active{}
+
+
