@@ -9,6 +9,33 @@
     padding: 0;
 }
 
+.img , figure {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+    object-position: center center;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: none;
+}
+
+p a {
+    display: inline;
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--tipo-principal);
     font-size: 100%;
@@ -18,6 +45,8 @@ body {
     font-smooth: always;
     -web-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    cursor: none;
 }
 
 .circulos {
@@ -29,13 +58,13 @@ body {
     z-index: 1;
 
     filter: blur(50px);
-    animation: circulo1 100s linear infinite both;
+    animation: circulo1 50s linear infinite both;
 }
 .circulos .circulo {
     position: absolute;
     width: 50%;
     height: 50%;
-    animation: circulo1 100s linear infinite both;
+    animation: circulo1 50s linear infinite both;
 
 }
 
@@ -102,7 +131,7 @@ body {
 }
 
 .main {
-    background: rgba(0, 0, 0,.5);
+    background: rgba(0, 0, 0,.6);
     margin: 0 0 1em;
     position: relative;
     z-index: 2;
@@ -119,10 +148,13 @@ body {
     justify-content: center;
     align-items: center;
 
+    /* border-bottom: 1px solid white; */
+
 }
 
 .seccion .info {
     font-size: 1.2em;
+    animation: aparecer1 2s ease 1 both;
 }
 
 .seccion .h2 {
@@ -166,7 +198,13 @@ body {
     font-weight: 600;
     text-decoration: none;
     transition: all .5s ease;
+
+    animation: aparecer1 2s ease 1 backwards both;
 }
+
+/* .seccion .ul .a:hover {} */
+
+
 .seccion .a:hover {
     border-color: white;
 }
@@ -181,7 +219,7 @@ body {
     margin: 1em 0;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: 1em;
 }
 
@@ -214,7 +252,7 @@ body {
     object-fit: cover;
 
     width: 100%;
-    background-color: lime;
+    /* background-color: lime; */
 }
 
 .seccion .h4 {
@@ -300,4 +338,34 @@ from{
     to{
         transform: rotate(360deg) scale(3);
     }
+}
+
+@keyframes aparecer1  {
+    from{
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+
+    }    
+}
+
+#cursor {
+    width: 5em;
+    height: 5em;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    pointer-events: none;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+}
+
+#cursor.mini {
+    transform: scale(0.7);
+    transition: all .1s linear;
 }
