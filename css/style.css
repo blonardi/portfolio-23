@@ -48,7 +48,7 @@ body {
 
     cursor: none;
 }
-
+/*
 .circulos {
     position: fixed;
     width: 100%;
@@ -104,7 +104,7 @@ body {
 .circulos .circulo4 .path {
     fill: rgb(15, 75, 170);
 }
-
+*/
 .header {
     width: 100%;
     min-height: 5em;    
