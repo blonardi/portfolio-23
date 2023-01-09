@@ -148,7 +148,7 @@ body {
 .seccion {
     width: 100%;
     min-height: 80vh;
-    /* margin: 1em 0; */
+    margin: 1em 0;
     padding: 2em;
 
     display: flex;
