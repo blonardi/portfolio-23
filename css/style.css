@@ -313,14 +313,6 @@ body {
     text-align: left;
 }
 
-.about .rrss {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
 .about .li {
     margin: 0 1em;
     /* background: orange; */
